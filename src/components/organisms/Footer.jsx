@@ -61,9 +61,9 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-primary-500/20 rounded-lg flex items-center justify-center">
                     <ApperIcon name="Phone" size={16} className="text-primary-400" />
-                  </div>
+</div>
                   <div>
-                    <div className="font-semibold">+92 000 000 0000</div>
+                    <a href="tel:+92000000000" className="font-semibold hover:text-primary-400 transition-colors duration-200">+92 000 000 0000</a>
                     <div className="text-sm text-gray-400">Primary Contact</div>
                   </div>
                 </div>
@@ -71,9 +71,9 @@ const Footer = () => {
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-secondary-500/20 rounded-lg flex items-center justify-center">
                     <ApperIcon name="Phone" size={16} className="text-secondary-400" />
-                  </div>
+</div>
                   <div>
-                    <div className="font-semibold">+92 111 111 1111</div>
+                    <a href="tel:+92111111111" className="font-semibold hover:text-secondary-400 transition-colors duration-200">+92 111 111 1111</a>
                     <div className="text-sm text-gray-400">Alternative Contact</div>
                   </div>
                 </div>

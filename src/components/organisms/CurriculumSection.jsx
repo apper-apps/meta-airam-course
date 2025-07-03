@@ -71,7 +71,7 @@ const CurriculumSection = () => {
     }
   };
 
-  return (
+return (
     <section id="curriculum" className="section-padding bg-white dark:bg-gray-900">
       <div className="container-custom">
         <motion.div
