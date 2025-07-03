@@ -1,0 +1,141 @@
+@import 'react-toastify/dist/ReactToastify.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-xl border border-white/20 shadow-xl;
+  }
+  
+  .glass-card-dark {
+    @apply dark:bg-gray-800/30 dark:border-gray-700/30;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+  }
+  
+  .gradient-bg {
+    @apply bg-gradient-to-br from-primary-500 via-secondary-500 to-accent-500;
+  }
+  
+  .hero-gradient {
+    background: linear-gradient(135deg, 
+      rgba(99, 102, 241, 0.1) 0%, 
+      rgba(139, 92, 246, 0.1) 50%, 
+      rgba(236, 72, 153, 0.1) 100%);
+  }
+  
+  .animated-gradient {
+    background: linear-gradient(-45deg, #6366f1, #8b5cf6, #ec4899, #6366f1);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
+  @keyframes gradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .floating-label {
+    @apply absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-500 transition-all duration-200 pointer-events-none;
+  }
+  
+  .floating-label-active {
+    @apply -translate-y-8 text-sm text-primary-600 dark:text-primary-400;
+  }
+  
+  .form-input {
+    @apply w-full px-4 py-3 rounded-xl border border-gray-200 bg-white/50 backdrop-blur-sm transition-all duration-200 focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 focus:outline-none dark:border-gray-700 dark:bg-gray-800/50 dark:text-white;
+  }
+  
+  .btn-primary {
+    @apply px-8 py-4 rounded-xl font-semibold text-white bg-gradient-to-r from-primary-600 to-secondary-600 hover:from-primary-700 hover:to-secondary-700 transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply px-6 py-3 rounded-xl font-medium text-primary-600 bg-white/80 backdrop-blur-sm border border-primary-200 hover:bg-primary-50 hover:border-primary-300 transform hover:scale-[1.02] active:scale-[0.98] transition-all duration-200 dark:text-primary-400 dark:bg-gray-800/50 dark:border-gray-700 dark:hover:bg-gray-700/50;
+  }
+  
+  .section-padding {
+    @apply py-20 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+}
+
+.toast-custom {
+  @apply rounded-xl shadow-xl;
+}
+
+.toast-body {
+  @apply font-medium;
+}
+
+.Toastify__toast--success {
+  @apply bg-green-500;
+}
+
+.Toastify__toast--error {
+  @apply bg-red-500;
+}
+
+.Toastify__toast--info {
+  @apply bg-blue-500;
+}
+
+.Toastify__toast--warning {
+  @apply bg-yellow-500;
+}
+
+.Toastify__progress-bar--success {
+  @apply bg-green-300;
+}
+
+.Toastify__progress-bar--error {
+  @apply bg-red-300;
+}
+
+.Toastify__progress-bar--info {
+  @apply bg-blue-300;
+}
+
+.Toastify__progress-bar--warning {
+  @apply bg-yellow-300;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 dark:bg-gray-800;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 dark:bg-gray-600 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400 dark:bg-gray-500;
+}
